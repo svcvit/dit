@@ -17,7 +17,9 @@
  *
  * NOTE: If you change these, also change the error_reporting() code below
  *
- */
+ */     
+        //$root = dirname(__FILE__);
+        //var_dump($root);
 	define('ENVIRONMENT', 'development');
 /*
  *---------------------------------------------------------------
@@ -56,7 +58,7 @@ if (defined('ENVIRONMENT'))
  * as this file.
  *
  */
-	$system_path = 'system';
+	$system_path = '../system';
 
 /*
  *---------------------------------------------------------------
@@ -72,7 +74,7 @@ if (defined('ENVIRONMENT'))
  * NO TRAILING SLASH!
  *
  */
-	$application_folder = 'application';
+	$application_folder = '../application';
 
 /*
  * --------------------------------------------------------------------
