@@ -6,7 +6,9 @@ class Migration extends CI_Controller {
     
 	public function index()
 	{
-		$this->load->view('welcome_message');
+
+		
+            $this->load->view('welcome_message');
                 
                 $this->load->library('migration');
 

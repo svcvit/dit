@@ -1,0 +1,8 @@
+/* IE only CSS */
+/* Set default next/previous default style for IE */
+body {
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+  color: #333333;
+}

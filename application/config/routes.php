@@ -38,7 +38,7 @@
 |
 */
 
-$route['default_controller'] = "migration";
+$route['default_controller'] = "start";
 $route['404_override'] = '';
 
 

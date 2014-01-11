@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'localhost/dit/public_html';
+$config['base_url']	= 'http://localhost/dit/public_html';
 
 /*
 |--------------------------------------------------------------------------
@@ -224,7 +224,7 @@ $config['cache_path'] = '';
 | MUST set an encryption key.  See the user guide for info.
 |
 */
-$config['encryption_key'] = 'aidapoUPDTEZEhdhshHHAjKAL';
+$config['encryption_key'] = 'UB8qpAMokBJ8wKGo5BRWLyLXMNypIJ0x';
 
 /*
 |--------------------------------------------------------------------------
@@ -244,15 +244,15 @@ $config['encryption_key'] = 'aidapoUPDTEZEhdhshHHAjKAL';
 | 'sess_time_to_update'		= how many seconds between CI refreshing Session Information
 |
 */
-$config['sess_cookie_name']		= 'ci_session';
+$config['sess_cookie_name']		= 'cisession';
 $config['sess_expiration']		= 7200;
-$config['sess_expire_on_close']	= FALSE;
-$config['sess_encrypt_cookie']	= FALSE;
-$config['sess_use_database']	= FALSE;
+$config['sess_expire_on_close'] 	= TRUE;
+$config['sess_encrypt_cookie']          = TRUE;
+$config['sess_use_database']            = TRUE;
 $config['sess_table_name']		= 'ci_sessions';
 $config['sess_match_ip']		= FALSE;
-$config['sess_match_useragent']	= TRUE;
-$config['sess_time_to_update']	= 300;
+$config['sess_match_useragent']         = TRUE;
+$config['sess_time_to_update']          = 300;
 
 /*
 |--------------------------------------------------------------------------
