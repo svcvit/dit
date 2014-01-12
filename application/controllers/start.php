@@ -7,9 +7,9 @@ class Start extends CI_Controller {
 	public function index()
 	{
             
-            $this->layout->setLayout('layout_admin');
+          
             
-            $this->layout->view('/admin/login_view');
+            $this->load->view('/admin/login_view');
 		
             
 

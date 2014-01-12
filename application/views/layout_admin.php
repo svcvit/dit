@@ -1,26 +1,40 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Bootstrap 101 Template</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Admin</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <style>
+        body {
+            padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+        }
+    </style>
     <!-- Bootstrap -->
     <link href="<?php echo site_url('css/bootstrap.css') ?>" rel="stylesheet">
+     <link href="<?php echo site_url('css/style.css') ?>" rel="stylesheet">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
   </head>
   <body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="brand" href="#">DIT</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li class="active"><a href="<?php base_url(); ?>">Home</a></li>
+                    <li><a href="<?php echo site_url('users'); ?>">Users</a></li>
+                    <li><a href="<?php echo site_url('login/logout'); ?>">Logout</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+</div>
 
- <?php echo $content_for_layout ?>
+      <div class="container"> <?php echo $content_for_layout ?></div>
+
 
       
- <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="<?php echo site_url('js/bootstrap.min.js')?>"></script>
   </body>
 </html>

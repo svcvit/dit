@@ -36,9 +36,9 @@
 
     <form method="post" action="<?php echo site_url('login'); ?>"class="form-signin">
         <h2 class="form-signin-heading">Please sign in</h2>
-        <input type="text" name="email" class="input-block-level" value="<?=set_value('email')?>" placeholder="Email address">
+        <input type="text" name="email" class="input-block-level" value="<?php set_value('email'); ?>" placeholder="Email address">
         <input type="password" name="password" class="input-block-level" placeholder="Password">
-        <button class="btn btn-large btn-primary" type="submit">Sign in</button>
+        <button class="btn btn-large btn-primary" type="submit">Log in</button>
         <br/>
         <br/>
         <?php echo validation_errors();?>
