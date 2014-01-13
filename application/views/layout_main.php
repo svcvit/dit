@@ -9,11 +9,11 @@
     <!-- Bootstrap -->
     <link href="<?php echo site_url('css/bootstrap.css') ?>" rel="stylesheet">
     <link href="<?php echo site_url('css/style.css') ?>" rel="stylesheet">
-    <link href="<?php echo site_url('css/datepicker.css') ?>" rel="stylesheet">
+    <link href="<?php echo site_url('css/bootstrap-datetimepicker.min.css') ?>" rel="stylesheet">
     
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="<?php echo site_url('js/bootstrap.min.js') ?>"></script>
-    <script src="<?php echo site_url('js/bootstrap-datepicker') ?>"></script>
+    <script src="<?php echo site_url('js/bootstrap-datetimepicker.min.js') ?>"></script>
     
     
 

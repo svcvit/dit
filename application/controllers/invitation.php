@@ -26,30 +26,26 @@ class Invitation extends CI_Controller {
     protected function fieldrules() {
         $rules = array(
             array(
-                'field'   => 'firstname',
-                'label'   => 'Vorname',
+                'field'   => 'name',
+                'label'   => 'Name',
                 'rules'   => 'required|trim|xss_clean|max_length[100]'
             ),
             array(
-                'field'   => 'lastname',
-                'label'   => 'Nachname',
+                'field'   => 'surname',
+                'label'   => 'Surname',
                 'rules'   => 'required|trim|xss_clean|max_length[100]|min_length[3]'
             ),
             array(
-                'field'   => 'firma',
-                'label'   => 'Firma',
+                'field'   => 'media',
+                'label'   => 'Media',
                 'rules'   => 'required|trim|xss_clean'
             ),
             array(
                 'field'   => 'email',
                 'label'   => 'E-Mail',
                 'rules'   => 'required|valid_email|trim|xss_clean'
-            ),
-            array(
-                'field'   => 'participate',
-                'label'   => 'participate',
-                'rules'   => 'callback_participateCheck|trim|xss_clean'
             )
+
         );
 
         $this->form_validation->set_message('participateCheck', ' Ja oder Nein?');

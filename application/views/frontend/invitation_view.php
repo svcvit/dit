@@ -15,34 +15,31 @@ echo form_hidden('vip', 'yes');
 ?>
 <div id="myContent">
 	    
-	<input type="radio" value="ja ich komme" class="syncTypes" name="answer"> ja ich komme<br>
+    <input type="radio" value="YES, I will attend" class="syncTypes" name="attend"> YES, I will attend for a press collection presentation<br><small>Swarovski Jewelry & Watches, Swarovski Crystals, Swarovski Gemstones, Atelier Swarovski and Lola & Grace</small>
 
 	            
 	<div id="contacts" style="display:none;padding:3px;top:15px;position:relative">     
-	<label class="checkbox">
-	<input type="checkbox" name="interview" value="ja, ich würde gerne eine interview führen">ja, ich würde gerne eine interview führen<br/>
-	</label>
+	
 
-	<label class="checkbox">
-	<input type="checkbox" name="tour" value="ja, ich würde gerne ein Standrundführung bekommen">ja, ich würde gerne ein Standrundführung bekommen
-	</label>
-	<label class="checkbox">
-	<input type="checkbox" >andere </label>
-
-	    <input type="text" name="other" placeholder="Text input">
 	    
-	    <label class="control-label" for="">am gewünschten datum</label>
+	<label class="control-label" for="">Preferred day and time:</label>
 	  
-	<input class="datepicker" name="date" type="text">
-	<span class="add-on"><i class="icon-calendar"></i></span>
-
+	<div class="well">
+        <div id="datetimepicker1" class="input-append date">
+         <input data-format="dd/MM/yyyy hh:mm" type="text"></input>
+            <span class="add-on">
+             <i data-time-icon="icon-time" data-date-icon="icon-calendar">
+              </i>
+                </span>
+              </div>
+            </div>
 	</div>
 
 
 	</div>
 	<br/>
 	<br/>
-	<input type="radio" value="groups" class="syncTypes" name="answer"> Nein, ich komme nicht
+	<input type="radio" value="groups" class="syncTypes" checked="checked" name="attend"> NO, I am unfortunately not able to attend
 	<br/>
 	<br/>
 
@@ -62,7 +59,7 @@ $(function() {
     $groups = $('#groups');
     $types.change(function() {
         $this = $(this).val();
-        if ($this == "ja ich komme") {
+        if ($this == "YES, I will attend") {
             $groups.slideUp(200);
             $contacts.delay(200).slideDown(200);
         }
@@ -74,8 +71,11 @@ $(function() {
 });
 </script>
 
-<script type="text/javascript" language="javascript">
- $(document).ready(function() {
-     $('.datepicker').datepicker({format: 'yyyy-mm-dd'});
- });
-	 </script>
+<script type="text/javascript">
+  $(function() {
+    $('#datetimepicker1').datetimepicker({
+      language: 'en',
+      pickSeconds: false
+    });
+  });
+</script>
