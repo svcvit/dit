@@ -1,5 +1,6 @@
 <?php
 //http://tarruda.github.io/bootstrap-datetimepicker/
+echo validation_errors();
 echo form_fieldset('Digital Invitation Tool');
 echo form_open();
 
@@ -11,7 +12,11 @@ echo form_label('Media', 'media');
 echo form_input('media');
 echo form_label('E-mail', 'email');
 echo form_input('email');
-echo form_hidden('vip', 'yes');
+echo form_hidden('vip', 'no');
+
+
+
+
 ?>
 <div id="myContent">
 	    
@@ -26,7 +31,7 @@ echo form_hidden('vip', 'yes');
 	  
 	<div class="well">
         <div id="datetimepicker1" class="input-append date">
-         <input data-format="dd/MM/yyyy hh:mm" type="text"></input>
+         <input data-format="yyyy-MM-dd hh:mm" name="date"  type="text"></input>
             <span class="add-on">
              <i data-time-icon="icon-time" data-date-icon="icon-calendar">
               </i>
@@ -39,7 +44,7 @@ echo form_hidden('vip', 'yes');
 	</div>
 	<br/>
 	<br/>
-	<input type="radio" value="groups" class="syncTypes" checked="checked" name="attend"> NO, I am unfortunately not able to attend
+	<input type="radio" value="NO, I am unfortunately not able to attend " class="syncTypes" checked="checked" name="attend"> NO, I am unfortunately not able to attend
 	<br/>
 	<br/>
 
@@ -48,6 +53,7 @@ echo form_hidden('vip', 'yes');
 
 
 <?php
+echo form_submit('submit', 'Submit', 'class="btn btn-info"');
 echo form_close();
 echo form_fieldset_close(); 
 ?>

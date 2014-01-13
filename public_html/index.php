@@ -17,7 +17,23 @@
  *
  * NOTE: If you change these, also change the error_reporting() code below
  *
- */     
+ */
+
+
+/*
+|---------------------------------------------------------------
+| TimeZone 
+|---------------------------------------------------------------
+|
+| default Time Zone
+| 
+
+*/
+if( ! ini_get('date.timezone') )
+{
+   date_default_timezone_set('Europe/Berlin');
+}
+
         //$root = dirname(__FILE__);
         //var_dump($root);
 	define('ENVIRONMENT', 'development');
