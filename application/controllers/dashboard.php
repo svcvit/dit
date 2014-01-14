@@ -20,11 +20,8 @@ class Dashboard extends CI_Controller {
         $config['total_rows'] = $this->dashboard_model->numberRecords();
         $config['per_page'] = 3;
         $this->pagination->initialize($config);
-        $data['records'] = $this->dashboard_model->getRecords($config['per_page'], $this->uri->segment(3));
-        $this->data['items'] = $this->dashboard_model->getRecords();
+        $this->data['items'] = $this->dashboard_model->getRecords($config['per_page'], $this->uri->segment(3));
         $this->layout->setLayout('layout_admin');         
-      
-        
         $this->data['item'] = $this->dashboard_model->getRecords();
         $this->layout->view('/admin/dashboard_view', $this->data);
         
