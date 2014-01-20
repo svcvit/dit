@@ -23,6 +23,10 @@ class Migration_Create_invitations extends CI_Migration {
 				'type' => 'VARCHAR',
 				'constraint' => '100',
 			),
+                                'country' => array(
+				'type' => 'VARCHAR',
+				'constraint' => '100',
+			),
                     
                         'email' => array(
 				'type' => 'VARCHAR',

@@ -22,6 +22,7 @@ class Dashboard extends CI_Controller {
                     'surname' => 'Surname',
                     'media' => 'Media',
                     'email' => 'E-mail',
+                    'country' => 'Country',
                     'vip' => 'VIP',
                     'attend' => 'Attend',
                     'date' => 'Date',

@@ -13,13 +13,13 @@ class Invitation extends CI_Controller {
            $this->load->library('form_validation');
            $this->fieldrules();
            
-           var_dump($this->form_validation->run());
+          $this->form_validation->run();
            
            $this->layout->view('/frontend/invitation_view');
           
-           echo '<pre>';
-           var_dump($this->input->post());
-           echo '</pre>';
+           //echo '<pre>';
+           //var_dump($this->input->post());
+           //echo '</pre>';
            if($this->form_validation->run() !== false) {
                
            
@@ -28,6 +28,7 @@ class Invitation extends CI_Controller {
                $aData['name']         = $this->input->post('name');
                $aData['surname']      = $this->input->post('surname');
                $aData['media']        = $this->input->post('media');
+               $aData['country']        = $this->input->post('country');
                $aData['email']        = $this->input->post('email');
                $aData['vip']          = $this->input->post('vip');
                $aData['attend']       = $this->input->post('attend');
@@ -43,30 +44,35 @@ class Invitation extends CI_Controller {
            }
        }
        public function form(){
+           
+           $comma = NULL;
 
            $this->load->library('form_validation');
            $this->fieldrules();
            
-           var_dump($this->form_validation->run());
+           $this->form_validation->run();
            
            $this->layout->view('/frontend/invitation_view_vip');
-          
-           echo '<pre>';
-           var_dump($this->input->post());
-           echo '</pre>';
+          /*
+          echo '<pre>';
+          var_dump($this->input->post());
+           echo '</pre>';*/
            if($this->form_validation->run() !== false) {
-               
-               
-           $comma = implode(" / ", $this->input->post('invite'));
-
+            
+           
+           if($this->input->post('attend') == 'YES, I will attend'){  
+               $comma = implode(" / ", $this->input->post('invite'));
+           }
+          
                $now                   = date("Y-m-d H:i:s");
                $aData['name']         = $this->input->post('name');
                $aData['surname']      = $this->input->post('surname');
                $aData['media']        = $this->input->post('media');
+               $aData['country']        = $this->input->post('country');
                $aData['email']        = $this->input->post('email');
                $aData['vip']          = $this->input->post('vip');
                $aData['attend']       = $this->input->post('attend');
-               $aData['interview_with']       = $comma;
+               $aData['interview_with'] = $comma;
                $aData['date']         = $this->input->post('date');
                $aData['reg_date']     =  $now;
                 

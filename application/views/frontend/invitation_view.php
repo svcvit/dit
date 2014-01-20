@@ -1,19 +1,70 @@
 <?php
 //http://tarruda.github.io/bootstrap-datetimepicker/
 echo validation_errors();
-echo form_fieldset('Digital Invitation Tool');
+$name = array(
+              'name'        => 'name',
+              'id'          => 'username',
+              'value'       => '',
+              'maxlength'   => '',
+              'size'        => '',
+              'style'       => '',
+              'placeholder' => 'Name'
+            );
+			
+$surname = array(
+              'name'        => 'surname',
+              'id'          => '',
+              'value'       => '',
+              'maxlength'   => '',
+              'size'        => '',
+              'style'       => '',
+              'placeholder' => 'Surname'
+            );	
+$media = array(
+              'name'        => 'media',
+              'id'          => '',
+              'value'       => '',
+              'maxlength'   => '',
+              'size'        => '',
+              'style'       => '',
+              'placeholder' => 'Media'
+            );	
+$country = array(
+              'name'        => 'country',
+              'id'          => '',
+              'value'       => '',
+              'maxlength'   => '',
+              'size'        => '',
+              'style'       => '',
+              'placeholder' => 'Country'
+            );
+
+$email = array(
+              'name'        => 'email',
+              'id'          => '',
+              'value'       => '',
+              'maxlength'   => '',
+              'size'        => '',
+              'style'       => '',
+              'placeholder' => 'E-mail'
+            );			
+
+	$attributes = array(
+    'class' => 'invitation',
+    'style' => 'color: #fff;',
+    'style' => 'font-size: 33px;',
+);
 echo form_open();
 
-echo form_label('Name', 'name');
-echo form_input('name');
-echo form_label('Surname', 'surname');
-echo form_input('surname');
-echo form_label('Media', 'media');
-echo form_input('media');
-echo form_label('E-mail', 'email');
-echo form_input('email');
-echo form_hidden('vip', 'no');
 
+echo form_label('Invitation','inv',$attributes);
+echo br(2);
+echo form_input($name).'<br/>';
+echo form_input($surname).'<br/>';
+echo form_input($media).'<br/>';
+echo form_input($country).'<br/>';
+echo form_input($email).'<br/>';
+echo form_hidden('vip', 'No');
 
 
 
@@ -44,7 +95,7 @@ echo form_hidden('vip', 'no');
 	</div>
 	<br/>
 	<br/>
-	<input type="radio" value="NO, I am unfortunately not able to attend " class="syncTypes" checked="checked" name="attend"> NO, I am unfortunately not able to attend
+	<input type="radio" value="NO, I am unfortunately not able to attend" class="syncTypes" checked="checked" name="attend"> NO, I am unfortunately not able to attend
 	<br/>
 	<br/>
 
@@ -53,9 +104,9 @@ echo form_hidden('vip', 'no');
 
 
 <?php
-echo form_submit('submit', 'Submit', 'class="btn btn-info"');
+echo form_submit('submit', 'Submit');
 echo form_close();
-echo form_fieldset_close(); 
+ 
 ?>
 
 <script>
@@ -69,7 +120,7 @@ $(function() {
             $groups.slideUp(200);
             $contacts.delay(200).slideDown(200);
         }
-        else if ($this == "groups") {
+        else if ($this == "NO, I am unfortunately not able to attend") {
             $contacts.slideUp(200);
             $groups.delay(200).slideDown(200);
         }

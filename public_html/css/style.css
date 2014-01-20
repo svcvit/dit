@@ -93,4 +93,59 @@
 
 }
 
+#page-main{
+background: url("../img/bg_rose.jpg") no-repeat fixed center center / cover rgba(0, 0, 0, 0);
+font-family: Fjalla one,sans-serif;
+
+
+}
+
+#login-logo{
+  left: 281px;
+    position: relative;
+    width: 28%;
+}
+
+form{
+
+margin: 16px 15px 20px;
+color: #FFFFFF;
+}
+.hed {
+    color: #FFFFFF;
+    font-size: 39px;
+    left: 97px;
+    line-height: 45px;
+    margin-top: 17px;
+    position: relative;
+    text-align: center;
+    width: 72%;
+
+}
+
+.block{
+   color: #FFFFFF;
+    left: 2px;
+    position: relative;
+    width: 40%;
+}
+
+.fbg{
+ /*! ! background: url("../img/hg.png") repeat scroll 0 0 rgba(0, 0, 0, 0);*/
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.3);
+    color: #fff;
+    padding-top: 15px;
+    width: 772px;
+    padding-bottom: 1px;
+}
+.invitation{
+}
+
+input[type="submit"]{
+    
+ padding: 1px 9px 3px 8px;
+    width: 21%;
+}
+
+
 

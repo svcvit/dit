@@ -23,7 +23,7 @@
             <a class="brand" href="#">DIT</a>
             <div class="nav-collapse collapse">
                 <ul class="nav">
-                    <li class="active"><a href="<?php base_url(); ?>">Home</a></li>
+                    <li><a href="<?php echo site_url('dashboard'); ?>">Home</a></li>
                     <li><a href="<?php echo site_url('users'); ?>">Users</a></li>
                     <li><a href="<?php echo site_url('login/logout'); ?>">Logout</a></li>
                 </ul>
