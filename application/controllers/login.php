@@ -28,6 +28,9 @@ class Login extends CI_Controller {
                     $this->input->post('email'),
                     $this->input->post('password')
                 );
+            
+                
+               
 
             if ( $res !== false ) {
                 $_SESSION['username'] = $this->input->post('email');

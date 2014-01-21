@@ -51,6 +51,10 @@ class Migration_Create_invitations extends CI_Migration {
 				'type' => 'VARCHAR',
 				'constraint' => '250',
 			),
+                        'user_id' => array(
+				'type' => 'INT',
+				'constraint' => '10',
+			),
 		));
                 
                 $this->dbforge->add_key('id', TRUE);

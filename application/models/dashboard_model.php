@@ -4,14 +4,16 @@
 
 class Dashboard_model extends CI_Model {
 
-      function getRecords($num='', $offset='', $sort_by, $sort_order){
+      function getRecords($num='', $offset='', $sort_by, $sort_order, $userId){
 
         $sort_order = ($sort_order == 'asc')? 'asc' : 'desc';  
         $sort_columns = array('id', 'name', 'surname', 'media','country', 'vip', 'attend', 'date', 'interview_with', 'reg_date');
         $sort_by = (in_array($sort_by, $sort_columns)) ? $sort_by: 'id';
         
         $this->db->order_by($sort_by,$sort_order);
-        return $this->db->get('invitations', $num, $offset)->result();
+        return $this->db
+                ->where('user_id', $userId) 
+                ->get('invitations', $num, $offset)->result();
                        
 
 

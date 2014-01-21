@@ -14,6 +14,7 @@ class Login_model extends CI_Model {
             ->db
             ->where('email', $email)
             ->where('password', sha1($password))
+            ->where('activated', '1')   
             ->limit(1)
             ->get('users');
 

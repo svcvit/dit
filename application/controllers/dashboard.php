@@ -15,7 +15,7 @@ class Dashboard extends CI_Controller {
 
     public function index($sort_by ='id', $sort_order='desc' ,$offset = 0)
     {
-        $limit = 3;
+        $limit = 15;
         $this->data['fields'] = array(
                     'id' => 'id',
                     'name' => 'Name',
@@ -34,9 +34,14 @@ class Dashboard extends CI_Controller {
         $this->data['sort_by']       = $sort_by;
         $this->data['sort_order']    = $sort_order;
         
+        $this->load->model('user_model');
+        $this->data['users'] = $this->user_model->get();
+        $userId = $this->data['users'][0]->id;
         
         $this->load->model('dashboard_model');
-        $this->data['items'] = $this->dashboard_model->getRecords($limit, $offset, $sort_by, $sort_order);
+        $this->data['items'] = $this->dashboard_model->getRecords($limit, $offset, $sort_by, $sort_order, $userId);
+        
+
         
         $config['base_url'] = site_url("dashboard/index/$sort_by/$sort_order");
         $config['total_rows'] = $this->dashboard_model->numberRecords();
