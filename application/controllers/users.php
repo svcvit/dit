@@ -18,6 +18,23 @@ class Users extends CI_Controller {
             $this->load->model('user_model');
             
             $this->data['users'] = $this->user_model->get();
+            
+            
+            
+        $this->load->model('dashboard_model');
+        $correntuser = $this->dashboard_model->currentUser($_SESSION['username']);
+        
+        
+        if($correntuser[0]->user_type == 'admin'){
+           $this->data['users'] = $this->user_model->get();
+        }else{
+         $this->data['users'] = $this->dashboard_model->currentUser($_SESSION['username']);
+        }
+            
+            
+            echo "<pre>";
+            print_r($this->data['users']);
+            echo "</pre>";
             $this->layout->setLayout('layout_admin');
             
             $this->layout->view('/admin/users_view', $this->data);

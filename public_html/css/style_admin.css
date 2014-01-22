@@ -1,0 +1,151 @@
+
+
+
+#inputcontainer label{
+
+    clear: both;
+    display: block;
+    float: left;
+    margin: 6px 0 0;
+    width: 120px;
+
+}
+
+
+.radiocont{
+
+    margin-top: 5px;
+}
+.error_field{
+
+   border: 1px solid #ff0000!important;
+}
+
+.error-inline p{
+    color: #FF0000;
+    left: 126px;
+    position: relative;
+    width: 107px;
+
+}
+
+.form-signin {
+    max-width: 300px;
+    padding: 19px 29px 29px;
+    margin: 0 auto 20px;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+    box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+    margin-bottom: 10px;
+}
+.form-signin input[type="text"],
+.form-signin input[type="password"] {
+    font-size: 16px;
+    height: auto;
+    margin-bottom: 15px;
+    padding: 7px 9px;
+}
+
+
+
+
+.forms{
+    left: 57px;
+    position: relative;
+    top: 49px;
+    width: 349px;
+
+}
+
+.error_radio{
+
+    color: #ff0000;
+    padding-right: 23px;
+    padding-top: 5px;
+
+}
+
+.check{
+ bottom: 13px;
+    left: 122px;
+    position: relative;
+	width: 231px;
+
+}
+.textnr{
+	 font-size: 9px;
+    line-height: 9px;
+
+}
+
+.button{
+ position: relative;
+    right: 25px;
+    top: 18px;
+
+}
+
+#page-main{
+background: url("../img/bg_rose.jpg") no-repeat fixed center center / cover rgba(0, 0, 0, 0);
+font-family: Fjalla one,sans-serif;
+
+
+}
+
+#login-logo{
+  left: 281px;
+    position: relative;
+    width: 28%;
+}
+
+form{
+
+margin: 16px 15px 20px;
+color: #000;
+}
+.hed {
+    color: #FFFFFF;
+    font-size: 39px;
+    left: 97px;
+    line-height: 45px;
+    margin-top: 17px;
+    position: relative;
+    text-align: center;
+    width: 72%;
+
+}
+
+.block{
+   color: #FFFFFF;
+    left: 2px;
+    position: relative;
+    width: 40%;
+}
+
+.fbg{
+ /*! ! background: url("../img/hg.png") repeat scroll 0 0 rgba(0, 0, 0, 0);*/
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.3);
+    color: #fff;
+    padding-top: 15px;
+    width: 772px;
+    padding-bottom: 1px;
+}
+.invitation{
+}
+
+input[type="submit"]{
+    
+ padding: 1px 9px 3px 8px;
+    width: 21%;
+}
+
+
+

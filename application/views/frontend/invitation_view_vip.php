@@ -98,8 +98,19 @@ echo form_hidden('vip', 'Yes');
        
          <?php echo form_label( form_checkbox( 'invite[]', 'Robert Buchbauer' ) . 'Robert Buchbauer, member of the Executive Board' ); ?><br/>
          <?php echo form_label( form_checkbox( 'invite[]', 'Nathalie Colin' ) . 'Nathalie Colin, Swarovski’s CGB Creative Director' ); ?><br/>
-         <?php echo form_label( form_checkbox( 'invite[]', 'Shourouk' ) . 'Shourouk, Jewelry Designer' ); ?><br/>
-  
+         <?php echo form_label( form_checkbox( 'invite[]', 'Shourouk' ) . 'Shourouk, Jewelry Designer' ); ?><br/><br/>
+         
+         <div class="well">
+        <div id="datetimepicker2" class="input-append date">
+         <input data-format="yyyy-MM-dd hh:mm" name="date_interview"  type="text" placeholder = "Date"></input>
+            <span class="add-on">
+             <i data-time-icon="icon-time" data-date-icon="icon-calendar">
+              </i>
+                </span>
+
+          
+              </div>
+            </div>
           </div>
 	</div>
 	<br/>
@@ -135,6 +146,15 @@ $(function() {
         }
     });
 });
+</script>
+
+<script type="text/javascript">
+  $(function() {
+    $('#datetimepicker2').datetimepicker({
+      language: 'en',
+      pickSeconds: false
+    });
+  });
 </script>
 
 <script type="text/javascript">

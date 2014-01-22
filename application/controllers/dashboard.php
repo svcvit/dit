@@ -25,7 +25,8 @@ class Dashboard extends CI_Controller {
                     'country' => 'Country',
                     'vip' => 'VIP',
                     'attend' => 'Attend',
-                    'date' => 'Date',
+                    'date_tour' => 'Date Tour',
+                    'date_interview' => 'Date Interview',
                     'interview_with' => 'Interviw',
                     'reg_date' => 'Invitation Date'
                     
@@ -44,8 +45,14 @@ class Dashboard extends CI_Controller {
         
         
         $this->load->model('dashboard_model');
-        $ids = $this->dashboard_model->currentUser($_SESSION['username']);
-        $this->data['items'] = $this->dashboard_model->getRecords($limit, $offset, $sort_by, $sort_order, $ids[0]->id);
+        $correntuser = $this->dashboard_model->currentUser($_SESSION['username']);
+        
+        if($correntuser[0]->user_type == 'admin'){
+           $this->data['items'] = $this->dashboard_model->getAllRecords($limit, $offset, $sort_by, $sort_order); 
+        }else{
+         $this->data['items'] = $this->dashboard_model->getRecords($limit, $offset, $sort_by, $sort_order, $correntuser[0]->id);
+        }
+        
         
         
         // echo $_SESSION['username'];
@@ -53,7 +60,7 @@ class Dashboard extends CI_Controller {
          $this->dashboard_model->currentUser($_SESSION['username']);
         
          
-         print_r($ids[0]->id);
+         print_r($correntuser);
          echo '</pre>';
         $config['base_url'] = site_url("dashboard/index/$sort_by/$sort_order");
         $config['total_rows'] = $this->dashboard_model->numberRecords();

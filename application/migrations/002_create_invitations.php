@@ -43,19 +43,23 @@ class Migration_Create_invitations extends CI_Migration {
 				'constraint' => '250',
 			),
                     
-                        'date' => array(
+                        'date_tour' => array(
 				'type' => 'datetime',
 				
+			),
+                       'date_interview' => array(
+				'type' => 'datetime',
+				
+			),
+                      'interview_with' => array(
+				'type' => 'VARCHAR',
+				'constraint' => '250',
 			),
                          'reg_date' => array(
 				'type' => 'datetime',
 				
 			),
-                        'interview_with' => array(
-				'type' => 'VARCHAR',
-				'constraint' => '250',
-			),
-                        'user_id' => array(
+                         'user_id' => array(
 				'type' => 'INT',
 				'constraint' => '10',
 			),

@@ -13,7 +13,7 @@
     </style>
     <!-- Bootstrap -->
     <link href="<?php echo site_url('css/bootstrap.css') ?>" rel="stylesheet">
-     <link href="<?php echo site_url('css/style.css') ?>" rel="stylesheet">
+     <link href="<?php echo site_url('css/style_admin.css') ?>" rel="stylesheet">
 
   </head>
   <body>
@@ -32,7 +32,7 @@
     </div>
 </div>
 
-      <div class="container"> <?php echo $content_for_layout ?></div>
+      <div class="container2"> <?php echo $content_for_layout ?></div>
 
 
       

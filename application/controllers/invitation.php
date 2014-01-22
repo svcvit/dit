@@ -32,7 +32,7 @@ class Invitation extends CI_Controller {
                $aData['email']        = $this->input->post('email');
                $aData['vip']          = $this->input->post('vip');
                $aData['attend']       = $this->input->post('attend');
-               $aData['date']         = $this->input->post('date');
+               $aData['date_tour']     = $this->input->post('date');
                $aData['reg_date']     =  $now;
                 
                $this->load->model('Invitation_model');
@@ -43,10 +43,10 @@ class Invitation extends CI_Controller {
 
            }
        }
-       public function form(){
+       public function form($id){
            
            $comma = NULL;
-
+           
            $this->load->library('form_validation');
            $this->fieldrules();
            
@@ -60,7 +60,7 @@ class Invitation extends CI_Controller {
            if($this->form_validation->run() !== false) {
             
            
-           if($this->input->post('attend') == 'YES, I will attend'){  
+           if($this->input->post('invite')){  
                $comma = implode(" / ", $this->input->post('invite'));
            }
           
@@ -73,8 +73,10 @@ class Invitation extends CI_Controller {
                $aData['vip']          = $this->input->post('vip');
                $aData['attend']       = $this->input->post('attend');
                $aData['interview_with'] = $comma;
-               $aData['date']         = $this->input->post('date');
+               $aData['date_tour']        = $this->input->post('date');
+               $aData['date_interview']   = $this->input->post('date_interview');
                $aData['reg_date']     =  $now;
+               $aData['user_id']     =  $id;
                 
                $this->load->model('Invitation_model');
                $this->Invitation_model->saveData($aData);
