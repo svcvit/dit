@@ -27,4 +27,14 @@ class Dashboard_model extends CI_Model {
         return $num;
 
     }
+      function currentUser($user)
+    {
+        
+                return $this->db
+                ->where('email', $user) 
+                ->get('users')->result();
+        
+
+      
+    }
 }

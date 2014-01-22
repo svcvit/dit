@@ -13,18 +13,13 @@ class Users extends CI_Controller {
 
     }
     
-	public function index($id = NULL)
+	public function index()
 	{
             $this->load->model('user_model');
             
             $this->data['users'] = $this->user_model->get();
             $this->layout->setLayout('layout_admin');
-           
             
-             
-            
-            
-           
             $this->layout->view('/admin/users_view', $this->data);
 
 	}
