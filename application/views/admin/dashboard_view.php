@@ -4,7 +4,7 @@
             <?php echo $this->pagination->create_links();?>
         </ul>  
     </div>
-    
+    <div class="container2">
     <table class="table table-hover">
         
       <thead> 
@@ -33,3 +33,4 @@
 
        </tbody>
     </table>
+    </div>

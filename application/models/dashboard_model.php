@@ -39,10 +39,15 @@ class Dashboard_model extends CI_Model {
         
     }
 
-    function numberRecords() {
+    function numberRecords($user_id = NULL) {
 
-        $num = $this->db->count_all_results('invitations');
-
+        if($user_id){
+        $num = $this->db
+                ->where('user_id', $user_id)
+                ->count_all_results('invitations');
+        }else{
+           $num = $this->db->count_all_results('invitations'); 
+        }
         return $num;
 
     }

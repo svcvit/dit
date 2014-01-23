@@ -8,8 +8,9 @@
 
 class Invitation extends CI_Controller {
 
-       public function index(){
-
+       public function index($id= NULL){
+           
+           
            $this->load->library('form_validation');
            $this->fieldrules();
            
@@ -34,6 +35,7 @@ class Invitation extends CI_Controller {
                $aData['attend']       = $this->input->post('attend');
                $aData['date_tour']     = $this->input->post('date');
                $aData['reg_date']     =  $now;
+               $aData['user_id']     =  $id;
                 
                $this->load->model('Invitation_model');
                $this->Invitation_model->saveData($aData);
@@ -43,7 +45,7 @@ class Invitation extends CI_Controller {
 
            }
        }
-       public function form($id){
+       public function form($id='n'){
            
            $comma = NULL;
            
@@ -52,7 +54,7 @@ class Invitation extends CI_Controller {
            
            $this->form_validation->run();
            
-           $this->layout->view('/frontend/invitation_view_vip');
+           
           /*
           echo '<pre>';
           var_dump($this->input->post());
@@ -80,16 +82,24 @@ class Invitation extends CI_Controller {
                 
                $this->load->model('Invitation_model');
                $this->Invitation_model->saveData($aData);
+               $this->layout->view('/frontend/confirmation_view');
                
-
+               
               
 
+           }  else {
+               $this->layout->view('/frontend/invitation_view_vip');
            }
        }
 
-       
+        
+            
+            
+            
+        
 
 
+        
     protected function fieldrules() {
         $rules = array(
             array(

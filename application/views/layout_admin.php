@@ -17,6 +17,7 @@
 
   </head>
   <body>
+      
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
@@ -24,7 +25,7 @@
             <div class="nav-collapse collapse">
                 <ul class="nav">
                     <li><a href="<?php echo site_url('dashboard'); ?>">Home</a></li>
-                    <li><a href="<?php echo site_url('users'); ?>">Users</a></li>
+                    <?php if($admin == 'admin'){ ?><li><a href="<?php echo site_url('users'); ?>">Users</a></li><?php }else{ ?><li><a href="<?php echo site_url('dashboard/links'); ?>">Links</a></li><?php } ?>
                     <li><a href="<?php echo site_url('login/logout'); ?>">Logout</a></li>
                 </ul>
             </div><!--/.nav-collapse -->
@@ -32,7 +33,7 @@
     </div>
 </div>
 
-      <div class="container2"> <?php echo $content_for_layout ?></div>
+      <div class="container"> <?php echo $content_for_layout ?></div>
 
 
       

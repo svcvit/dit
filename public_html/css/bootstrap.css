@@ -294,8 +294,10 @@ a:focus {
 
 .container2{
     
-    width: 1428px;
     margin: 0 auto;
+    position: relative;
+    right: 387px;
+    width: 1595px;
 }
 
 .span12 {

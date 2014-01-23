@@ -15,6 +15,7 @@ class Users extends CI_Controller {
     
 	public function index()
 	{
+            $this->data['admin'] = 'admin';
             $this->load->model('user_model');
             
             $this->data['users'] = $this->user_model->get();
@@ -42,6 +43,8 @@ class Users extends CI_Controller {
 	}
         
         public function edit($id = NULL){
+            
+            $this->data['admin'] = 'admin';
             $this->load->model('user_model');
             $this->data['users'] = $this->user_model->get($id);
            
