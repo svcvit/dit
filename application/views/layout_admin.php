@@ -17,7 +17,7 @@
 
   </head>
   <body>
-      
+    <?php if($_SESSION) {?>  
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
@@ -32,7 +32,7 @@
         </div>
     </div>
 </div>
-
+    <?php }?>
       <div class="container"> <?php echo $content_for_layout ?></div>
 
 

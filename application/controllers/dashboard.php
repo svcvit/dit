@@ -65,7 +65,7 @@ class Dashboard extends CI_Controller {
          $this->dashboard_model->currentUser($_SESSION['username']);
         
          $this->data['admin'] = $correntuser[0]->user_type;
- ;
+ 
 
         
         $this->layout->setLayout('layout_admin');

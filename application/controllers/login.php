@@ -41,6 +41,15 @@ class Login extends CI_Controller {
 
         $this->load->view('admin/login_view');
     }
+    
+    public function singnup()
+    {
+        
+        
+        
+        $this->layout->setLayout('layout_admin');
+        $this->layout->view('/admin/singnup_view');
+    }
 
 
     protected function fieldrules() {

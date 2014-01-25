@@ -12,7 +12,7 @@
 
     <link rel="stylesheet"  type="text/css" href="<?php echo site_url('css/bootstrap.min.css')?>"/>
     <link href="<?php echo site_url('css/bootstrap-responsive.css')?>" rel="stylesheet"/>
-    <link rel="stylesheet"  type="text/css" href="<?php echo site_url('css/style.css') ?>"/>
+    <link rel="stylesheet"  type="text/css" href="<?php echo site_url('css/style_admin.css') ?>"/>
 
 
     <style type="text/css">
@@ -39,6 +39,7 @@
         <input type="text" name="email" class="input-block-level" value="<?php set_value('email'); ?>" placeholder="Email address">
         <input type="password" name="password" class="input-block-level" placeholder="Password">
         <button class="btn btn-large btn-primary" type="submit">Log in</button>
+        <?php echo anchor('login/singnup', 'Create Account', 'class="btn btn-large"');?>
         <br/>
         <br/>
         <?php echo validation_errors();?>
