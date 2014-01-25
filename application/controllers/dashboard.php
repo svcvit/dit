@@ -15,6 +15,8 @@ class Dashboard extends CI_Controller {
 
     public function index($sort_by ='id', $sort_order='desc' ,$offset = 0)
     {
+        
+        $this->output->enable_profiler(TRUE);
         $limit = 15;
         $this->data['fields'] = array(
                     'id' => 'id',
