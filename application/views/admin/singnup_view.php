@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Login Admin</title>
+    <title>Singnup</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -34,8 +34,6 @@
 
 <div class="container">
 <?php
-echo validation_errors();
-
 $name = array(
               'name'        => 'name',
               'id'          => 'name',
@@ -87,11 +85,20 @@ $password_confirm = array(
 
 echo form_open('login/singnup','class="form-signin"');
 
+echo '<span class="label label-important">';        
+
+echo "</span>";
+echo heading('Please Sign Up', 2, 'class="form-signin-heading"');
 echo form_input($name);
+echo form_error('name');
 echo form_input($country);
+echo form_error('country');
 echo form_input($email);
+echo form_error('email');
 echo form_password($password);
+echo form_error('password');
 echo form_password($password_confirm);
+echo form_error('password_confirm');
 echo br(2);
 echo form_submit('submit', 'Sign Up', 'class="btn btn-large btn-primary"');
 

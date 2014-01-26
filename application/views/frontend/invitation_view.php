@@ -1,6 +1,5 @@
 <?php
 //http://tarruda.github.io/bootstrap-datetimepicker/
-echo validation_errors();
 $name = array(
               'name'        => 'name',
               'id'          => 'username',
@@ -60,10 +59,15 @@ echo form_open();
 echo form_label('Invitation','inv',$attributes);
 echo br(2);
 echo form_input($name).'<br/>';
+echo form_error('name');
 echo form_input($surname).'<br/>';
+echo form_error('surname');
 echo form_input($media).'<br/>';
+echo form_error('media');
 echo form_input($country).'<br/>';
+echo form_error('country');
 echo form_input($email).'<br/>';
+echo form_error('email');
 echo form_hidden('vip', 'No');
 
 

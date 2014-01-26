@@ -11,7 +11,8 @@ class Login extends CI_Controller {
 
     public function index()
     {
-        $this->output->enable_profiler(TRUE);
+    $this->form_validation->set_error_delimiters('<div class="alert alert-error">', '</div>');
+    $this->output->enable_profiler(TRUE);
     $this->load->library('user_agent');
         if ( isset($_SESSION['username']) ) {
             redirect('dashboard');
@@ -46,6 +47,7 @@ class Login extends CI_Controller {
     
     public function singnup()
     {
+        $this->form_validation->set_error_delimiters('<div class="alert alert-error">', '</div>');
         $this->output->enable_profiler(TRUE);
         
         $this->load->model('user_model');
@@ -60,6 +62,7 @@ class Login extends CI_Controller {
                $data['password'] = $this->user_model->hash($data['password']);
             
                 $this->user_model->save($data);
+                redirect('login');
                 
                 
             }

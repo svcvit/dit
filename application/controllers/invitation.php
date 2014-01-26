@@ -6,17 +6,18 @@
  * Time: 12:15
  */
 
+
 class Invitation extends CI_Controller {
 
        public function index($id= NULL){
            
-           
+           $this->form_validation->set_error_delimiters('<div class="alert alert-error">', '</div>');
            $this->load->library('form_validation');
            $this->fieldrules();
            
           $this->form_validation->run();
            
-           $this->layout->view('/frontend/invitation_view');
+           
           
            //echo '<pre>';
            //var_dump($this->input->post());
@@ -39,16 +40,19 @@ class Invitation extends CI_Controller {
                 
                $this->load->model('Invitation_model');
                $this->Invitation_model->saveData($aData);
+               $this->layout->view('/frontend/confirmation_view');
                
 
               
 
+            }  else {
+               $this->layout->view('/frontend/invitation_view');
            }
        }
        public function form($id='n'){
            
            $comma = NULL;
-           
+            $this->form_validation->set_error_delimiters('<div class="alert alert-error">', '</div>');
            $this->load->library('form_validation');
            $this->fieldrules();
            
@@ -115,6 +119,11 @@ class Invitation extends CI_Controller {
             array(
                 'field'   => 'media',
                 'label'   => 'Media',
+                'rules'   => 'required|trim|xss_clean'
+            ),
+              array(
+                'field'   => 'country',
+                'label'   => 'Country',
                 'rules'   => 'required|trim|xss_clean'
             ),
             array(
