@@ -14,6 +14,10 @@
     <!-- Bootstrap -->
     <link href="<?php echo site_url('css/bootstrap.css') ?>" rel="stylesheet">
      <link href="<?php echo site_url('css/style_admin.css') ?>" rel="stylesheet">
+         <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="<?php echo site_url('js/bootstrap.min.js') ?>"></script>
 
   </head>
   <body>
