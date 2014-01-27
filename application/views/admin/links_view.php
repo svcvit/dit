@@ -5,7 +5,7 @@
     Here are the two links for your Standard and VIP media. You can copy them and send them to journalists of your market. Please use the STANDARD link for media accreditations without guided booth tour or interview slots. Use the VIP link for media you'd like to give an interview opportunity or the possibility of a guided booth tour.
     <br/><br/>
     
-    The links are customized for your market only, please don't share it with your PR colleagues from other markets or third parties. The invitations should always be sent out by your PR department only.
+    The links are customized for your market only, please don't share it with your PR colleagues or third parties. The invitations should always be sent out by your PR department only.
 
 
     Thank you!
