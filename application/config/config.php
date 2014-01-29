@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://localhost/dit/public_html';
+$config['base_url']	= 'http://invitation.swarovski-baselworld.com/';
 
 /*
 |--------------------------------------------------------------------------

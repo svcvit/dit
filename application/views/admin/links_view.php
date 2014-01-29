@@ -18,4 +18,4 @@
 
 <br/>
 <span class="label label-important">VIP</span><br/>
-<input type="text" style="width: 500px" value="<?php echo site_url('invitation').'/form/index/'. $m_id; ?>"/>
+<input type="text" style="width: 500px" value="<?php echo site_url('invitation').'/form/'. $m_id; ?>"/>

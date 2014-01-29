@@ -32,10 +32,11 @@ class Users extends CI_Controller {
          $this->data['users'] = $this->dashboard_model->currentUser($_SESSION['username']);
         }
             
-            
+            /*
             echo "<pre>";
             print_r($this->data['users']);
             echo "</pre>";
+			*/
             $this->layout->setLayout('layout_admin');
             
             $this->layout->view('/admin/users_view', $this->data);

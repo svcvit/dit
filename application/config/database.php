@@ -49,9 +49,9 @@ $active_group = 'default';
 $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'root';
-$db['default']['password'] = '';
-$db['default']['database'] = 'db_dit';
+$db['default']['username'] = 'ueli-_skinv-prod';
+$db['default']['password'] = '23X4%p4+@79?>]3tU3M)C9Di(P6}V&';
+$db['default']['database'] = 'ueli-banholzer_swarovski-invitation-prod';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;

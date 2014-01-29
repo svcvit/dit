@@ -9,7 +9,7 @@
 
 class Invitation extends CI_Controller {
 
-       public function index($id= NULL){
+       public function index($id= 2){
            
            $this->form_validation->set_error_delimiters('<div class="alert alert-error">', '</div>');
            $this->load->library('form_validation');
@@ -42,6 +42,28 @@ class Invitation extends CI_Controller {
                $this->Invitation_model->saveData($aData);
                $this->layout->view('/frontend/confirmation_view');
                
+			   $this->load->model('dashboard_model');
+			   $correntuser = $this->dashboard_model->currentUser($id);
+			  
+			  
+			  
+			   
+			   $name = $aData['name'];
+			   $body = "Hello \r\nA new accreditation just arrived for you. \r\nPlease check your online accreditation list:\r\n" ;
+				$body .="http://invitation.swarovski-baselworld.com/login";
+               
+			   $this->load->library('email');
+
+				$this->email->from('no-reply@invitation.swarovski-baselworld.com', 'Back-End Admin');
+				$this->email->to($correntuser[0]->email);
+
+				$this->email->subject('New accreditation for Baselworld');
+				$this->email->message($body);
+
+				$this->email->send();
+
+				//echo $this->email->print_debugger();
+							   
 
               
 
@@ -49,7 +71,7 @@ class Invitation extends CI_Controller {
                $this->layout->view('/frontend/invitation_view');
            }
        }
-       public function form($id='n'){
+       public function form($id= 2){
            
            $comma = NULL;
             $this->form_validation->set_error_delimiters('<div class="alert alert-error">', '</div>');
@@ -65,10 +87,10 @@ class Invitation extends CI_Controller {
            echo '</pre>';*/
            if($this->form_validation->run() !== false) {
             
-           
+           /*
            if($this->input->post('invite')){  
                $comma = implode(" / ", $this->input->post('invite'));
-           }
+           }*/
           
                $now                   = date("Y-m-d H:i:s");
                $aData['name']         = $this->input->post('name');
@@ -78,7 +100,7 @@ class Invitation extends CI_Controller {
                $aData['email']        = $this->input->post('email');
                $aData['vip']          = $this->input->post('vip');
                $aData['attend']       = $this->input->post('attend');
-               $aData['interview_with'] = $comma;
+               $aData['interview_with'] = $this->input->post('interview_with');;
                $aData['date_tour']        = $this->input->post('date');
                $aData['date_interview']   = $this->input->post('date_interview');
                $aData['reg_date']     =  $now;
@@ -88,7 +110,29 @@ class Invitation extends CI_Controller {
                $this->Invitation_model->saveData($aData);
                $this->layout->view('/frontend/confirmation_view');
                
+			 
+			    $this->load->model('dashboard_model');
+				$correntuser = $this->dashboard_model->currentUser($id);
+			  
+			  
+			  
+			   
+			   $name = $aData['name'];
+			   $body = "Hello \r\nA new accreditation just arrived for you. \r\nPlease check your online accreditation list:\r\n" ;
+				$body .="http://invitation.swarovski-baselworld.com/login";
                
+			   $this->load->library('email');
+
+				$this->email->from('no-reply@invitation.swarovski-baselworld.com', 'Back-End Admin');
+				$this->email->to($correntuser[0]->email);
+				$this->email->subject('New accreditation for Baselworld');
+				$this->email->message($body);
+
+				$this->email->send();
+
+				//echo $this->email->print_debugger();
+							   
+			   
               
 
            }  else {

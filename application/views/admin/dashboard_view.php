@@ -23,8 +23,13 @@
                 
               <?php foreach ($fields as $field_name => $field_display):?>
                 
-                <td><?php echo $item->$field_name;?></td>
-        
+				
+				<?php if($field_display == 'E-mail') {?>
+                
+				<td><?php echo '<a href="mailto:'.$item->$field_name.'">'. $item->$field_name.'</a>';?></td>
+				<?php }else{?>
+				<td><?php echo $item->$field_name;?></td>
+				<?php }?>
               <?php endforeach; ?>
                 
             </tr>

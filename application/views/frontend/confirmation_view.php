@@ -1,11 +1,11 @@
 <div class="confirm">
     
-    THANK YOU FOR YOUR REGISTRATION!
+    Thank you for registration!
     <br/>
-    WE ARE LOOKING FORWARD TO MEETING YOU IN BASEL.
+    We will get back to you to confirm your request. 
     <br/>
     <br/>
 
-    KIND REGARDS
+    Kind regards
     
 </div>

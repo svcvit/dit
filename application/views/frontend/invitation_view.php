@@ -56,7 +56,7 @@ $email = array(
 echo form_open();
 
 
-echo form_label('Invitation','inv',$attributes);
+echo form_label('Registration','inv',$attributes);
 echo br(2);
 echo form_input($name).'<br/>';
 echo form_error('name');

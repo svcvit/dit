@@ -53,10 +53,18 @@ class Dashboard_model extends CI_Model {
     }
       function currentUser($user)
     {
-        
-                return $this->db
+        if(is_numeric($user)){
+				return $this->db
+                ->where('id', $user) 
+                ->get('users')->result();
+		
+		}else{
+		return $this->db
                 ->where('email', $user) 
                 ->get('users')->result();
+		
+		}
+                
         
 
       

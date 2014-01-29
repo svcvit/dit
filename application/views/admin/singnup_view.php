@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Singnup</title>
+    <title>Please sign up</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -41,7 +41,7 @@ $name = array(
               'maxlength'   => '',
               'size'        => '',
               'class'       => 'input-block-level',
-              'placeholder' => 'Name'
+              'placeholder' => 'Name, Surname'
             );
 
 $country = array(
@@ -88,7 +88,7 @@ echo form_open('login/singnup','class="form-signin"');
 echo '<span class="label label-important">';        
 
 echo "</span>";
-echo heading('Please Sign Up', 2, 'class="form-signin-heading"');
+echo heading('Please sign up', 2, 'class="form-signin-heading"');
 echo form_input($name);
 echo form_error('name');
 echo form_input($country);
@@ -100,7 +100,7 @@ echo form_error('password');
 echo form_password($password_confirm);
 echo form_error('password_confirm');
 echo br(2);
-echo form_submit('submit', 'Sign Up', 'class="btn btn-large btn-primary"');
+echo form_submit('submit', 'Sign up', 'class="btn btn-large btn-primary"');
 
 echo form_close();
 

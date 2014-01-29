@@ -16,10 +16,9 @@ class Dashboard extends CI_Controller {
     public function index($sort_by ='id', $sort_order='desc' ,$offset = 0)
     {
         
-        $this->output->enable_profiler(TRUE);
+        //$this->output->enable_profiler(TRUE);
         $limit = 15;
         $this->data['fields'] = array(
-                    'id' => 'id',
                     'name' => 'Name',
                     'surname' => 'Surname',
                     'media' => 'Media',
@@ -28,9 +27,9 @@ class Dashboard extends CI_Controller {
                     'vip' => 'VIP',
                     'attend' => 'Attend',
                     'date_tour' => 'Date Tour',
-                    'date_interview' => 'Date Interview',
-                    'interview_with' => 'Interviw',
-                    'reg_date' => 'Invitation Date'
+                    'date_interview' => 'Interview Date',
+                    'interview_with' => 'Interview',
+                    'reg_date' => 'Accreditation Date'
                     
          );
         

@@ -94,8 +94,10 @@
 }
 
 #page-main{
-background: url("../img/bg_rose.jpg") no-repeat fixed center center / cover rgba(0, 0, 0, 0);
+background: url("/img/bg_rose.jpg") no-repeat fixed center center / cover rgba(0, 0, 0, 0);
+background: url("/img/bg_rose.jpg") no-repeat\9;
 font-family: Fjalla one,sans-serif;
+background-color: #ABACAE;
 
 
 }
@@ -104,6 +106,7 @@ font-family: Fjalla one,sans-serif;
   left: 281px;
     position: relative;
     width: 28%;
+	margin-top: 5%;
 }
 
 form{
@@ -159,4 +162,9 @@ input[type="submit"]{
     font-weight: 600;
     line-height: 43px;
     margin-left: 22%;
+}
+
+#datetimepicker3{
+
+
 }

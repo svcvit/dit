@@ -39,7 +39,7 @@
         <input type="text" name="email" class="input-block-level" value="<?php set_value('email'); ?>" placeholder="Email address">
         <input type="password" name="password" class="input-block-level" placeholder="Password">
         <button class="btn btn-large btn-primary" type="submit">Log in</button>
-        <?php echo anchor('login/singnup', 'Create Account', 'class="btn btn-large"');?>
+        <?php echo anchor('login/singnup', 'Create account', 'class="btn btn-large"');?>
         <br/>
         <br/>
         <?php echo validation_errors();?>

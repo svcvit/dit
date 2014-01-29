@@ -56,7 +56,7 @@ $email = array(
 echo form_open();
 
 
-echo form_label('Invitation','inv',$attributes);
+echo form_label('Registration','inv',$attributes);
 echo br(2);
 echo form_input($name).'<br/>';
 echo form_error('name');
@@ -95,13 +95,14 @@ echo form_hidden('vip', 'Yes');
           
               </div>
             </div>
+
 	
         <input type="radio" value="YES, I will attend and would like to have a one-to-one interview"  name="attend_sec"> YES, I will attend and would like to have a one-to-one interview with the following spokesperson(s) – only available from March 26 to 28th , from 9AM to 6PM:<br/>
          <br/>
        
-         <?php echo form_label( form_checkbox( 'invite[]', 'Robert Buchbauer' ) . 'Robert Buchbauer, member of the Executive Board' ); ?><br/>
-         <?php echo form_label( form_checkbox( 'invite[]', 'Nathalie Colin' ) . 'Nathalie Colin, Swarovski’s CGB Creative Director' ); ?><br/>
-         <?php echo form_label( form_checkbox( 'invite[]', 'Shourouk' ) . 'Shourouk, Jewelry Designer' ); ?><br/><br/>
+         <?php echo form_label( form_radio( 'interview_with', 'Robert Buchbauer' ) . 'Robert Buchbauer, member of the Executive Board' ); ?><br/>
+         <?php echo form_label( form_radio( 'interview_with', 'Nathalie Colin' ) . 'Nathalie Colin, Swarovski’s CGB Creative Director' ); ?><br/>
+         <?php echo form_label( form_radio( 'interview_with', 'Shourouk' ) . 'Shourouk, Jewelry Designer' ); ?><br/><br/>
          
          <div class="well">
         <div id="datetimepicker2" class="input-append date">
