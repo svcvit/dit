@@ -50,7 +50,7 @@ $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
 $db['default']['username'] = 'ueli-_skinv-prod';
-$db['default']['password'] = '23X4%p4+@79?>]3tU3M)C9Di(P6}V&';
+$db['default']['password'] = '';
 $db['default']['database'] = 'ueli-banholzer_swarovski-invitation-prod';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
